@@ -1,0 +1,26 @@
+@import "../../scss/theme/colors";
+@import "../../scss/configs/resize";
+
+.home-scene {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-cyan;
+  background-image: url("../../services/img/bg-pattern-top.svg"),
+    url("../../services/img/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  //   --w: 800px;
+  //   background-position: calc(-1 * var(--w) / 2 + 50%)
+  //       calc(-1 * var(--w) / 2 + 40%),
+  //     calc(100% + calc(var(--w) / 2 - 50%)) calc(100% + calc(var(--w) / 2 - 40%));
+  @media (min-width: $media-xxl) {
+  }
+  &__content {
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem;
+    position: relative;
+  }
+}

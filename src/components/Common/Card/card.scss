@@ -1,0 +1,91 @@
+@import "../../../scss/theme/colors";
+@import "../../../scss/utilities/mixins/animation";
+
+$border: solid 1px rgba(0, 0, 0, 0.1);
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 1rem;
+  color: $primary-color;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  &__content {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 300px 5px #00000085;
+  }
+  &__header {
+    height: 130px;
+  }
+  &__body {
+    padding: 0 2rem 1.5rem 2rem;
+  }
+  &__image {
+    $border-w: 5px;
+    border-radius: 50%;
+    margin-top: (-96px - $border-w) / 2;
+    margin-bottom: 1.3rem;
+    width: 96px + $border-w * 2;
+    height: 96px + $border-w * 2;
+    border: solid $border-w #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  &__name {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+  &__age,
+  &__country,
+  &__description {
+    color: $dark-grayish-blue;
+  }
+  &__country {
+    font-size: 0.85em;
+  }
+
+  &__footer {
+    border-top: $border;
+    padding: 1.5rem 2.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__count {
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 0.7em;
+  }
+
+  &__animation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -7.5px;
+    left: -7.5px;
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(
+      50% 0%,
+      90% 20%,
+      100% 60%,
+      75% 100%,
+      25% 100%,
+      0% 60%,
+      10% 20%
+    );
+    // background-color: red;
+    @include rot(4s);
+  }
+}
