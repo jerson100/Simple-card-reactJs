@@ -1,3 +1,3 @@
 # Reto de [Frontend Mentor](https://www.frontendmentor.io/)
 
-[preview](d)
+[preview](https://simple-card-reactjs.netlify.app/)
